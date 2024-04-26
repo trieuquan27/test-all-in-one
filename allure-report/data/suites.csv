@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Apr 26 09:53:40 ICT 2024","Fri Apr 26 09:53:42 ICT 2024","2808","firefox","test.spec.ts","","","","has title",""
+"passed","Fri Apr 26 09:53:40 ICT 2024","Fri Apr 26 09:53:43 ICT 2024","2922","webkit","test.spec.ts","","","","has title",""
+"passed","Fri Apr 26 10:06:39 ICT 2024","Fri Apr 26 10:06:43 ICT 2024","3944","chromium","test.spec.ts","","","","has title",""
