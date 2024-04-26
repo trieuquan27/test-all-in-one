@@ -3,7 +3,7 @@
 name: Dev Workflow
 
 on:
-  workflow_dispatch:
+  # workflow_dispatch:
   push:
     branches:
       - master
@@ -12,26 +12,21 @@ on:
   #     - master
 
 jobs:
-  trigger-test:
-    runs-on: ubuntu-latest
+  # trigger-test:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Dispatch QA Workflow
-        id: dispatch_qa_workflow
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.TEST_REPO_TOKEN }}
-          repository: trieuquan27/test.github.io
-          event-type: qa_workflow
+  #   steps:
+  #     - name: Dispatch QA Workflow
+  #       id: dispatch_qa_workflow
+  #       uses: peter-evans/repository-dispatch@v2
+  #       with:
+  #         token: ${{ secrets.TEST_REPO_TOKEN }}
+  #         repository: trieuquan27/test.github.io
+  #         event-type: qa_workflow
 
   publish:
     name: Publish the package
     runs-on: ubuntu-latest
-    needs: trigger-test
-
-    # if: github.event_name
-    # == 'workflow_dispatch' && contains
-
     steps:
       - name: Wait for tests to succeed
         uses: lewagon/wait-on-check-action@v1.3.4
